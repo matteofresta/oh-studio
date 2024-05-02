@@ -1,0 +1,208 @@
+
+
+
+:root
+{
+    --clr-primary-900: #000000;
+    --clr-primary-600: #e8e5e480;
+    --clr-primary-400: rgba(232, 229, 228, 0.5);
+    --clr-primary-200: #ffffff;
+
+    --ff-oh-studio: 'oh-studio', monospace;
+
+    --fw-light: 200;
+    --fw-regular: 400;
+    --fw-bold: 600;
+
+    --fs-400: .875 rem;
+    --fs-500: 1.125rem;
+    --fs-600: 2.375rem;
+    --fs-700: 4.5rem;
+}
+
+@font-face
+{
+    font-family: 'oh-studio';
+    src: url("font/hks8NVUtjEWwpEZ9gmKhEfED8BU~g6o23db9SGBKG-vFO198nk6HThOPCGSuW5OOM3XljGk.otf");
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-family: var(--ff-oh-studio);
+    font-weight: var(--fw-regular);
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list']{
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+a > *
+{
+    font-size: var(--fs-700);
+}
+
+/* Utilities CSS */
+
+.text-color-900 { color: var(--clr-primary-900)}
+.text-color-600 { color: var(--clr-primary-600)}
+
+.fw-light { font-weight: var(--fw-light); }
+.fw-regular { font-weight: var(--fw-regular); }
+.fw-bold { font-weight: var(--fw-bold); }
+
+.fs-400 { font-size: var(--fs-400); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-700 { font-size: var(--fs-700); }
+
+/* CSS Styling */
+header
+{
+    display: flex;
+    max-width: 100%;
+    height: 6rem;
+    justify-content: center;
+    align-items: center;
+}
+
+nav
+{
+    display: flex;
+    height: 3rem;
+    background-color: var(--clr-primary-400);
+    width: 20rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.8rem;
+}
+
+ul
+{
+    display: flex;
+    gap: 3em;
+}
+
+.wrapper-header
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    max-width: 1500px;
+    padding: 6rem 6rem;
+    margin-inline: auto;
+
+}
+
+.wrapper-header .col-h1
+{
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: var(--fs-700);
+}
+
+.wrapper-header .background
+{
+    background-color: var(--clr-primary-400);
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+}
+
+.wrapper-header a
+{
+    text-decoration: none;
+    color: var(--clr-primary-900);
+}
+
+.wrapper-body
+{
+    --gap: 2rem;
+    --br: 1rem;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+.wrapper-body .col
+{
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap);
+}
+
+.col img
+{
+    border-radius: var(--br);
+}
